@@ -1,0 +1,149 @@
+Certainly! Here's a comprehensive question that covers concepts of classes, objects, access specifiers, constructors, and constructor overloading in Object-Oriented Programming (OOP). This question is designed to prepare you for assessments on platforms like Coderbyte.
+
+---
+
+## OOP Programming Challenge: Library Management System
+
+### Problem Statement
+
+You are tasked with designing a simple Library Management System. Your system should be able to manage books and keep track of their details. Implement a `Book` class with the following features:
+
+1. **Class Definition:**
+   - The class should encapsulate data related to a book, such as the title, author, and publication year.
+
+2. **Constructors:**
+   - Implement at least two constructors:
+     - A default constructor that initializes the book with default values.
+     - A parameterized constructor that initializes the book with specific values for the title, author, and publication year.
+
+3. **Access Specifiers:**
+   - Use appropriate access specifiers to ensure encapsulation. Private fields should be used to store the book's details, and public methods should be provided to access and modify these details.
+
+4. **Methods:**
+   - Implement getter and setter methods for each of the book’s attributes.
+   - Implement a method `displayBookDetails()` that prints out the book’s details in the following format:
+     ```
+     Title: <title>
+     Author: <author>
+     Publication Year: <year>
+     ```
+
+5. **Overloading Constructors:**
+   - Demonstrate constructor overloading by creating an additional constructor that accepts only the title and author, and sets a default publication year (e.g., 2000).
+
+6. **Additional Functionality:**
+   - Implement a method `updatePublicationYear(int newYear)` that allows updating the publication year of the book.
+   - Implement a method `isPublishedBefore(int year)` that returns `true` if the book was published before the given year and `false` otherwise.
+
+### Class Definition Skeleton
+
+Here's a skeleton of the `Book` class for your implementation:
+
+```cpp
+#include <iostream>
+#include <string>
+
+class Book {
+private:
+    std::string title;
+    std::string author;
+    int publicationYear;
+
+public:
+    // Default constructor
+    Book();
+
+    // Parameterized constructor
+    Book(const std::string &title, const std::string &author, int year);
+
+    // Constructor with title and author, default year
+    Book(const std::string &title, const std::string &author);
+
+    // Getter and Setter for title
+    std::string getTitle() const;
+    void setTitle(const std::string &title);
+
+    // Getter and Setter for author
+    std::string getAuthor() const;
+    void setAuthor(const std::string &author);
+
+    // Getter and Setter for publication year
+    int getPublicationYear() const;
+    void setPublicationYear(int year);
+
+    // Display book details
+    void displayBookDetails() const;
+
+    // Update publication year
+    void updatePublicationYear(int newYear);
+
+    // Check if the book was published before a given year
+    bool isPublishedBefore(int year) const;
+};
+```
+
+### Example Usage
+
+```cpp
+int main() {
+    // Create a book using the default constructor
+    Book book1;
+    book1.displayBookDetails();
+
+    // Create a book using the parameterized constructor
+    Book book2("1984", "George Orwell", 1949);
+    book2.displayBookDetails();
+
+    // Create a book with only title and author, using default year
+    Book book3("The Catcher in the Rye", "J.D. Salinger");
+    book3.displayBookDetails();
+
+    // Update publication year
+    book3.updatePublicationYear(1951);
+    book3.displayBookDetails();
+
+    // Check if the book was published before a certain year
+    std::cout << "Was 'The Catcher in the Rye' published before 1960? "
+              << (book3.isPublishedBefore(1960) ? "Yes" : "No") << std::endl;
+
+    return 0;
+}
+```
+
+### Expected Output
+
+```
+Title: Default Title
+Author: Default Author
+Publication Year: 2000
+Title: 1984
+Author: George Orwell
+Publication Year: 1949
+Title: The Catcher in the Rye
+Author: J.D. Salinger
+Publication Year: 2000
+Title: The Catcher in the Rye
+Author: J.D. Salinger
+Publication Year: 1951
+Was 'The Catcher in the Rye' published before 1960? Yes
+```
+
+### Explanation of Concepts
+
+- **Classes and Objects**: You create a `Book` class and then instantiate objects of this class.
+- **Access Specifiers**: Private fields and public methods encapsulate data and provide controlled access.
+- **Constructors**: Different constructors initialize the `Book` object in various ways.
+- **Constructor Overloading**: Demonstrates multiple constructors with different parameter lists.
+- **Methods**: Implement getters/setters and additional functionality for manipulating and displaying book data.
+
+---
+
+### How to Prepare for the Assessment
+
+1. **Understand OOP Principles**: Make sure you can explain the concepts of encapsulation, inheritance, and polymorphism.
+2. **Practice Constructor Overloading**: Be able to write and differentiate between default and parameterized constructors.
+3. **Work on Access Specifiers**: Know when to use `public`, `private`, and `protected` access levels.
+4. **Implement Methods**: Practice writing methods for getting and setting data, and implementing business logic.
+5. **Test Cases**: Write test cases to validate that your methods work as expected.
+
+Good luck with your assessment on Coderbyte! If you need more practice or have any questions, feel free to ask.
