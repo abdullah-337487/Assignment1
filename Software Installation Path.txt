@@ -1,0 +1,11 @@
+Press Window + R and type:
+
+\\dcshare\WebBootCamp\
+
+
+\\cmdlhrsys03\Shared Softwares\SQL Studio Mgmt\
+SSMS-Setup-ENU v19.1.exe
+
+
+\\cmdlhrsys03\Shared Softwares\Visual Studio\VS2022\
+vs_enterprise.exe
